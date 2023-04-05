@@ -5,6 +5,8 @@ import os
 import sys
 from src.exception import CustomException
 from src.logger import logging
+from src.components.data_transformation import DataTransformation
+from src.components.data_transformation import DataTransformationConfig
 import pandas as pd
 
 from sklearn.model_selection import train_test_split
@@ -15,7 +17,7 @@ from dataclasses import dataclass
 #where to save the test data
 #where to save the train data
 
-@dataclass #we wil be able to directly define class variable
+@dataclass # @dataclasses we use when we need to store only variables , it saves time & space as we no need to write constructor
 class DataIngestionConfig: #any input we require will be given thorugh this class
     train_data_path: str=os.path.join('artifact',"train.csv")   # artifact is a folder which is used to store these csvs
     test_data_path: str=os.path.join('artifact',"test.csv")
@@ -57,4 +59,7 @@ class DataIngestion:
 
 if __name__=="__main__":
     obj=DataIngestion()
-    obj.initiate_data_ingestion()
+    train_data,test_data = obj.initiate_data_ingestion()
+    
+    data_transformation = DataTransformation()
+    data_transformation.initiate_data_transformation(train_data, test_data)
