@@ -94,7 +94,7 @@ class DataTransformation:
             numerical_columns = ["writing_score", "reading_score"]  # numerical columns names
 
             input_feature_train_df=train_df.drop(columns=[target_column_name],axis=1)   # drop the column which we want to predict
-            target_feature_train_df=train_df[target_column_name]                        # 
+            target_feature_train_df=train_df[target_column_name]                        
 
             input_feature_test_df=test_df.drop(columns=[target_column_name],axis=1)
             target_feature_test_df=test_df[target_column_name]
@@ -113,6 +113,7 @@ class DataTransformation:
 
             logging.info(f"Saved preprocessing object.")
 
+            # This save is defined in utils 
             save_object(
 
                 file_path=self.data_transformation_config.preprocessor_obj_file_path,   # path for file 

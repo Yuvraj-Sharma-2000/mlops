@@ -1,3 +1,9 @@
+'''
+This file contains utility methods
+It means the methods which are used again and agian in different files are written here
+(Just like a boilerplate code)
+'''
+
 import os
 import sys
 
