@@ -14,3 +14,13 @@ conda activate {path of your conda env}
 ```
 pip install -r requirements.txt
 ```
+
+### Run a python filr
+```
+python python -m src.components.data_ingestion
+```
+
+### Run application
+```
+python app.py
+```
