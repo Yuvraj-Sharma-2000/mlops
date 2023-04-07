@@ -9,11 +9,11 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/Yuvraj-Sharma-2000/mlops.git'
             }
         }
-        stage('Install Python') {
-            steps {
-                bat 'choco install python3 -y'
-            }
-        }
+//         stage('Install Python') {
+//             steps {
+//                 bat 'choco install python3 -y'
+//             }
+//         }
 
         stage('Run Python Script') {
             steps {
