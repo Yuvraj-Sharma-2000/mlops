@@ -8,12 +8,13 @@ pipeline {
         }
         stage('Install Python') {
             steps {
-                bat 'start /B python myscript.py'
+                bat 'choco install python3'
             }
         }
-        stage('Package') {
+
+        stage('Run Python Script') {
             steps {
-                bat 'python3 setup.py sdist bdist_wheel'
+                bat 'python myscript.py'
             }
         }
         // stage('Provision Environment') {
