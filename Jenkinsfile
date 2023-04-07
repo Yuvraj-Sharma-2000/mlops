@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Install Python') {
             steps {
-                sh 'apt-get update && apt-get install -y python3'
+                bat 'start /B python myscript.py'
             }
         }
         stage('Package') {
