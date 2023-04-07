@@ -14,7 +14,7 @@ pipeline {
 
         stage('Run Python Script') {
             steps {
-                bat 'python myscript.py'
+                bat 'python3 myscript.py'
             }
         }
         // stage('Provision Environment') {
