@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    environment {
+        PATH = "${env.PATH};"C:\\Python311\\"
+    }
     stages {
         stage('Git SCM Polling') {
             steps {
