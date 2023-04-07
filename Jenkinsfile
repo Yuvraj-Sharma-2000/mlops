@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Install Python') {
             steps {
-                bat 'choco install python3'
+                bat 'choco install python3 -y'
             }
         }
 
