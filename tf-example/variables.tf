@@ -1,3 +1,4 @@
 variable "ec2_name" {
-  type = ec2KeyPair
+  type = string
+  default = "my-ec2-instance"
 }
