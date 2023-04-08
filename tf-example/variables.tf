@@ -1,3 +1,3 @@
 variable "ec2_name" {
-  type = "ec2KeyPair"
+  type = ec2KeyPair
 }
